@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.19.11
+# v0.19.12
 
 using Markdown
 using InteractiveUtils
@@ -54,7 +54,7 @@ md"""
 
 #### 1
 
-Un separador de discos se alimenta con una mezcla de avena ($(floor(Int8,(xF*100))) %) y suciedad con un caudal másico de $(F). El separador logra que toda la avena salga por la salida de producto y retienen el $(floor(Int8,Sretenida*100)) % de la suciedad. Durante la operación normal, la suciedad queda retenida en el separador. La capacidad de almacenamiento de suciedad es de $(Vsuciedad), ¿cada cuánto tiempo habrá que limpiar el separador de discos?
+Un separador de discos se alimenta con una mezcla de avena ($(Int8(xF*100)) %) y suciedad con un caudal másico de $(F). El separador logra que toda la avena salga por la salida de producto y retienen el $(Int8(Sretenida*100)) % de la suciedad. Durante la operación normal, la suciedad queda retenida en el separador. La capacidad de almacenamiento de suciedad es de $(Vsuciedad), ¿cada cuánto tiempo habrá que limpiar el separador de discos?
 
 ##### Solución
 
@@ -87,8 +87,8 @@ CommonMark = "a80b9123-70ca-4bc0-993e-6e3bcb318db6"
 Unitful = "1986cc42-f94f-5a68-af5c-568840ba703d"
 
 [compat]
-CommonMark = "~0.8.3"
-Unitful = "~1.9.1"
+CommonMark = "~0.8.6"
+Unitful = "~1.12.0"
 """
 
 # ╔═╡ 00000000-0000-0000-0000-000000000002
@@ -100,9 +100,9 @@ uuid = "56f22d72-fd6d-98f1-02f0-08ddc0907c33"
 
 [[CommonMark]]
 deps = ["Crayons", "JSON", "URIs"]
-git-tree-sha1 = "393ac9df4eb085c2ab12005fc496dae2e1da344e"
+git-tree-sha1 = "4cd7063c9bdebdbd55ede1af70f3c2f48fab4215"
 uuid = "a80b9123-70ca-4bc0-993e-6e3bcb318db6"
-version = "0.8.3"
+version = "0.8.6"
 
 [[CompilerSupportLibraries_jll]]
 deps = ["Artifacts", "Libdl"]
@@ -111,14 +111,14 @@ version = "0.5.2+0"
 
 [[ConstructionBase]]
 deps = ["LinearAlgebra"]
-git-tree-sha1 = "f74e9d5388b8620b4cee35d4c5a618dd4dc547f4"
+git-tree-sha1 = "fb21ddd70a051d882a1686a5a550990bbe371a95"
 uuid = "187b0558-2788-49d3-abe0-74a17ed4e7c9"
-version = "1.3.0"
+version = "1.4.1"
 
 [[Crayons]]
-git-tree-sha1 = "3f71217b538d7aaee0b69ab47d9b7724ca8afa0d"
+git-tree-sha1 = "249fe38abf76d48563e2f4556bebd215aa317e15"
 uuid = "a8cc5b0e-0ffa-5ad4-8c14-923d3ee1735f"
-version = "4.0.4"
+version = "4.1.1"
 
 [[Dates]]
 deps = ["Printf"]
@@ -126,9 +126,9 @@ uuid = "ade2ca70-3891-5945-98fb-dc099432e06a"
 
 [[JSON]]
 deps = ["Dates", "Mmap", "Parsers", "Unicode"]
-git-tree-sha1 = "8076680b162ada2a031f707ac7b4953e30667a37"
+git-tree-sha1 = "3c837543ddb02250ef42f4738347454f95079d4e"
 uuid = "682c06a0-de6a-54ab-a142-c8b1cf79cde6"
-version = "0.21.2"
+version = "0.21.3"
 
 [[Libdl]]
 uuid = "8f399da3-3557-5675-b5ff-fb832c97cbdb"
@@ -147,9 +147,9 @@ version = "0.3.20+0"
 
 [[Parsers]]
 deps = ["Dates"]
-git-tree-sha1 = "ae4bbcadb2906ccc085cf52ac286dc1377dceccc"
+git-tree-sha1 = "3d5bf43e3e8b412656404ed9466f1dcbf7c50269"
 uuid = "69de0a69-1ddd-5017-9359-2bf0b02dc9f0"
-version = "2.1.2"
+version = "2.4.0"
 
 [[Printf]]
 deps = ["Unicode"]
@@ -167,18 +167,18 @@ version = "0.7.0"
 uuid = "9e88b42a-f829-5b0c-bbe9-9e923198166b"
 
 [[URIs]]
-git-tree-sha1 = "97bbe755a53fe859669cd907f2d96aee8d2c1355"
+git-tree-sha1 = "e59ecc5a41b000fa94423a578d29290c7266fc10"
 uuid = "5c2747f8-b7ea-4ff2-ba2e-563bfd36b1d4"
-version = "1.3.0"
+version = "1.4.0"
 
 [[Unicode]]
 uuid = "4ec0a83e-493e-50e2-b9ac-8f72acf5a8f5"
 
 [[Unitful]]
 deps = ["ConstructionBase", "Dates", "LinearAlgebra", "Random"]
-git-tree-sha1 = "880f77d2cd4c6948e6bd55425b7b52f34dcd7f4b"
+git-tree-sha1 = "d57a4ed70b6f9ff1da6719f5f2713706d57e0d66"
 uuid = "1986cc42-f94f-5a68-af5c-568840ba703d"
-version = "1.9.1"
+version = "1.12.0"
 
 [[libblastrampoline_jll]]
 deps = ["Artifacts", "Libdl", "OpenBLAS_jll"]
