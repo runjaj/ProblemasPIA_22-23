@@ -1,26 +1,11 @@
 ### A Pluto.jl notebook ###
-# v0.19.11
+# v0.19.13
 
 using Markdown
 using InteractiveUtils
 
 # ╔═╡ 9ee9b0c2-7379-487c-97b1-03861892e8bc
 using Unitful, CommonMark
-
-# ╔═╡ 32a60e8c-4862-11ec-1930-eb1947190aa0
-md"""
-### 3. Reducción de tamaño
-
-#### Problema 5
-
-Se desea reducir la tiempo de separación de la leche en un mínimo de una semana (antes de que la crema ascienda a la superficie), ¿cuál es el diámetro máximo que deben tener los glóbulos de crema tras su homogeneización, según la ley de Stoke, para que esto suceda? Suponer una profundidad de 10 cm.
-
-Datos: Viscosidad de la leche: 3 mPa·s, densidad de la leche desnatada: 1.036 g/cm³, densidad de la crema: 1.008 g/cm³. [[Earle](https://www.nzifst.org.nz/resources/unitoperations/sizereduction3.htm#problems)]
-
-#### Solución
-
-Datos del problema:
-"""
 
 # ╔═╡ 10e79161-1fc4-42b2-8392-7afb8879e05a
 μ = 3u"mPa*s"
@@ -37,8 +22,23 @@ t = 1u"wk"
 # ╔═╡ a646a7aa-53e4-4d89-99fa-28ff5fe50bd6
 d = 10u"cm"
 
+# ╔═╡ 32a60e8c-4862-11ec-1930-eb1947190aa0
+md"""
+### 3. Reducción de tamaño
+
+#### Problema 5
+
+Se desea reducir la tiempo de separación de la leche en un mínimo de una semana (antes de que la crema ascienda a la superficie), ¿cuál es el diámetro máximo que deben tener los glóbulos de crema tras su homogeneización, según la ley de Stoke, para que esto suceda? Suponer una profundidad de $d.
+
+Datos: Viscosidad de la leche: $(μ), densidad de la leche desnatada: $(ρf), densidad de la crema: $(ρₚ). [[Earle](https://www.nzifst.org.nz/resources/unitoperations/sizereduction3.htm#problems)]
+
+#### Solución
+
+Datos del problema:
+"""
+
 # ╔═╡ ce60d564-ae98-4462-9b1b-c41d1753a3cb
-g = 9.80665u"m/s^2"
+g = u"gn"
 
 # ╔═╡ e9172784-7378-4657-9c22-f6f8fa180e97
 md"""
@@ -53,7 +53,7 @@ Despejando se encuentra el diámetro de los glóbulos de grasa. que hace que la 
 vₘ = -d/t
 
 # ╔═╡ 5e84279e-a2e7-4fbc-b9a3-bb79256022e0
-D = uconvert(u"μm", sqrt(vₘ*18*μ/(g*(ρₚ-ρf))))
+D = sqrt(vₘ*18*μ/(g*(ρₚ-ρf))) |> u"μm"
 
 # ╔═╡ 45d0dc53-5ce9-47e2-af06-908b48cd5ee5
 cm"""
